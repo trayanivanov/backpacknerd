@@ -1,0 +1,18 @@
+$body-bg: $bpn-light-grey;
+$body-color: $bpn-dark-grey;
+$font-family-base: 'Ossem-Rounded';
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.button-container {
+  .btn-primary {
+    @include button-variant($bpn-blue, $bpn-blue, $bpn-whiteish, $bpn-whiteish, $bpn-blue, $bpn-blue, $bpn-blue, $bpn-blue, $bpn-whiteish);
+  }
+
+  .btn-outline-primary {
+    @include button-outline-variant($bpn-blue, $bpn-whiteish, $bpn-blue, $bpn-blue, $bpn-whiteish);
+  }
+}
+
+@import "~simplelightbox";

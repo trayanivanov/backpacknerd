@@ -1,3 +1,23 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+articles_list:
+    path: /articles
+    controller: App\Controller\ArticlesController::list
+
+articles_show:
+    path: /articles/{slug}
+    controller: App\Controller\ArticlesController::show
+
+articles_show_old:
+    path: /article/{id}
+    controller: App\Controller\ArticlesController::showOld
+
+calendar:
+    path: /calendar
+    controller: App\Controller\CalendarController::index
+
+contacts:
+    path: /contacts
+    controller: App\Controller\ContactsController::index

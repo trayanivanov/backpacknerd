@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('partials/bpn_image.html.twig') }}
+
+    <div class="container">
+        <h3 class="section-title">Календар 2021</h3>
+        <h6 class="section-subtitle">Купи си календар с кауза</h6>
+
+        <div class="dashed">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    За трета поредна година Backpack Nerd пуска собствен календар с кауза!<br><br>
+
+                    Симпатизирам на малка фондация наречена "Дивите животни". Харесвам тяхната дейност свързана с рехабилитация и отглеждане на осиротели или пострадали диви животни и връщане в естествената им среда.<br>
+                    С това далеч не се изчерпва тяхната активност. Голямата им цел е създаване на първия спасителен център в България, в който ще се приемат, лекуват и доотглеждат диви животни от всички видове, независимо от статута им на защитени или не.<br><br>
+
+                    Backpack Nerd иска да помогне на фондация "Дивите животни" като дари <span class="red">100% от печалбата</span> на продадените календари.<br>
+                    Цената за един брой календар е <span class="red">10 лева</span>.<br>
+                    Поради пандемичната обстановка тиражът тази година е намален на 150 бройки.<br>
+                    Размерите му са 15 на 15 сантиметра - настолен - тип "пирамидка" със спирала. Състои се от корица и 12 листа с мои фотографии от прекрасни дестинации.<br><br>
+
+                    Заявените бройки ще бъдат изпращани чрез куриерските услуги на Еконт и Спиди за сметка на получателя.<br><br>
+
+                    Можеш да заявиш твоята бройка на <a href="mailto:trayan@backpacknerd.com">trayan@backpacknerd.com</a> или чрез съобщение в някой от социалните канали на Backpack Nerd.<br><br>
+
+                    Повече информация за фондацията можеш да откриеш на техният сайт - <a href="https://wildanimals.bg" target="_blank">wildanimals.bg</a> или <a href="https://www.facebook.com/DiviteJivotni" target="_blank">facebook профил</a>.<br><br>
+
+                    <span class="red">
+                        С гордост обявявам кампанията за успешно приключила!<br>
+                        Тираж от 150 броя настолни календари се продаде за по-малко от 2 месеца.<br>
+                        Събраните средства в помощ на фондация "Дивите животни" са 1110 лева!<br>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <div class=" article-gallery">
+                    <a href="{{ asset('build/images/calendar/calendar_21.jpg') }}">
+                        <img src="{{ asset('build/images/calendar/calendar_21_thumb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2021" alt="Backpack Nerd Calendar 2021" />
+                    </a>
+                </div>
+                <a href="https://wildanimals.bg" target="_blank">
+                    <img src="{{ asset('build/images/misc/wild_animals.png') }}" class="img-fluid rounded mt-4" title="Wildanimals - Backpack Nerd Calendar 2021" alt="Wildanimals - Backpack Nerd Calendar 2021" />
+                </a>
+            </div>
+        </div>
+        {{ include('partials/follow_me.html.twig') }}
+
+        <br><br><br>
+
+        <h3 class="section-title">Календар 2020</h3>
+        <h6 class="section-subtitle">Приключила кампания</h6>
+
+        <div class="dashed">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    С гордост обявявам кампанията за успешно приключила!<br>
+                    Тираж от 300 броя настолни календари се продаде за по-малко от 3 месеца.<br>
+                    Събраните средства в помощ на фондация "Дивите животни" са <span class="red">2150 лева</span>!<br>
+                </p>
+                <a href="https://wildanimals.bg" target="_blank">
+                    <img src="{{ asset('build/images/misc/wild_animals.png') }}" class="img-fluid rounded mt-4" title="Wildanimals - Backpack Nerd Calendar 2020" alt="Wildanimals - Backpack Nerd Calendar 2020" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class=" article-gallery">
+                    <a href="{{ asset('build/images/calendar/calendar_20.jpg') }}">
+                        <img src="{{ asset('build/images/calendar/calendar_20_thumb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2020" alt="Backpack Nerd Calendar 2020" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ include('partials/follow_me.html.twig') }}
+
+        <br><br><br>
+
+        <h3 class="section-title">Календар 2019</h3>
+        <h6 class="section-subtitle">Приключила кампания</h6>
+
+        <div class="dashed">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    С гордост обявявам кампанията за успешно приключила!<br>
+                    Тираж от 200 броя настолни календари се продаде за по-малко от 2 месеца.<br>
+                    Събраните средства в помощ на фондация "Дивите животни" са <span class="red">1474 лева</span>!<br>
+                </p>
+                <a href="https://wildanimals.bg" target="_blank">
+                    <img src="{{ asset('build/images/misc/wild_animals.png') }}" class="img-fluid rounded mt-4" title="Wildanimals - Backpack Nerd Calendar 2019" alt="Wildanimals - Backpack Nerd Calendar 2019" />
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class=" article-gallery">
+                    <a href="{{ asset('build/images/calendar/calendar_19.jpg') }}">
+                        <img src="{{ asset('build/images/calendar/calendar_19_thumb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2019" alt="Backpack Nerd Calendar 2019" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ include('partials/follow_me.html.twig') }}
+
+        <br><br><br>
+
+        <div class="dashed">&nbsp;</div>
+    </div>
+{% endblock %}
+
+{% block meta_title %}{{ 'Календар 2021 - ' ~  parent() }}{% endblock %}
+
+{% block og_title %}{{ 'Календар 2021 - ' ~  parent() }}{% endblock %}
+{% block og_url %}{{ url('calendar') }}{% endblock %}

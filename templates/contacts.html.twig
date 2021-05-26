@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('partials/bpn_image.html.twig') }}
+
+    <div class="container">
+        <h3 class="section-title">Контакти</h3>
+        <h6 class="section-subtitle">Драсни ми един ред. Обещавам да отговоря!</h6>
+
+        <div class="dashed">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-9">
+                <p>
+                    Казвам се Траян Иванов.<br>
+                    Можеш да се свържеш с мен на <a href="mailto:trayan@backpacknerd.com">trayan@backpacknerd.com</a>.<br>
+                    Или чрез някой от социалните профили на Backpack Nerd:<br><br>
+
+                    <a href="https://www.facebook.com/backpacknerd" target="_blank"><i class="bi-facebook"></i> backpacknerd</a><br><br>
+                    <a href="https://www.instagram.com/backpack.nerd" target="_blank"><i class="bi-instagram"></i> backpack.nerd</a><br><br>
+
+                    "I don't know half of you half as well as I should like.. and I like less than half of you half as well as you deserve.."<br>
+                    Bilbo Baggins
+                </p>
+            </div>
+            <div class="col-md-3">
+                <img src="{{ asset('build/images/trayan_ivanov.jpg') }}" class="img-fluid rounded" title="Backpack Nerd - Trayan Ivanov" alt="Backpack Nerd - Trayan Ivanov" />
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="dashed">&nbsp;</div>
+    </div>
+{% endblock %}
+
+{% block meta_title %}{{ 'Контакти - ' ~  parent() }}{% endblock %}
+
+{% block og_title %}{{ 'Контакти - ' ~  parent() }}{% endblock %}
+{% block og_url %}{{ url('contacts') }}{% endblock %}

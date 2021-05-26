@@ -1,0 +1,7 @@
+<div class="col-md-6 article-thumb-wrapper">
+    <a href="{{ path('articles_show', {slug: article.slug}) }}">
+        <img src="{{ asset(articleImagePath(article.id, article.articleMediaThumb.name)) }}" class="img-fluid" alt="{{ article.title }}" />
+    </a>
+    <h5><a href="{{ path('articles_show', {slug: article.slug}) }}">{{ article.title }}</a></h5>
+    <p>{{ article.description }}</p>
+</div>

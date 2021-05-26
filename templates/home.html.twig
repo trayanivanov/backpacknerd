@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('partials/bpn_image.html.twig') }}
+
+    <div class="container">
+        <div class="badges">
+            <div class="row">
+                <div class="col-md-6 order-lg-2">
+                    <h5>Добра среща!</h5>
+                    <p>
+                        Обичаш разходки сред природата? Планински преходи? Лов на печати?<br>
+                        На бас, че ще намериш поне една интересна дестинация за теб в някоя от моите статии.<br>
+                        Поздрави!
+                    </p>
+                </div>
+                <div class="col-md-6 order-lg-1">
+                    <img src="{{ asset('build/images/badges_tmb.jpg') }}" class="img-fluid" alt="Backpack Nerd">
+                </div>
+            </div>
+
+            {{ include('partials/follow_me.html.twig') }}
+        </div>
+
+        <div class="dashed">&nbsp;</div>
+
+        <h3 class="section-title">Избрани статии</h3>
+        <h6 class="section-subtitle">Разгледай <a href="{{ path('articles_list') }}">всички статии &raquo;</a></h6>
+
+        <div class="row">
+            {% for favourite in favouriteArticles %}
+                {{ include('partials/article_block.html.twig', {'article': favourite}) }}
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <div class="d-grid col-md-6 mx-auto button-container">
+                <a href="{{ path('articles_list') }}" class="btn btn-primary">Всички статии</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

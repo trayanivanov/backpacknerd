@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('partials/bpn_image.html.twig') }}
+
+    <div class="container">
+        <h3 class="section-title">There and back again..</h3>
+        <h6 class="section-subtitle">Всички статии</h6>
+
+        <div class="dashed">&nbsp;</div>
+
+        <div class="row">
+            {% for article in articles %}
+                {{ include('partials/article_block.html.twig', {'article': article}) }}
+            {% endfor %}
+        </div>
+
+        <div class="dashed">&nbsp;</div>
+    </div>
+{% endblock %}
+
+{% block meta_title %}{{ 'Всички статии - ' ~  parent() }}{% endblock %}
+
+{% block og_title %}{{ 'Всички статии - ' ~  parent() }}{% endblock %}
+{% block og_url %}{{ url('articles_list') }}{% endblock %}

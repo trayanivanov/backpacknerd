@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="bg">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block meta_title %}Backpack Nerd{% endblock %}</title>
+
+        <meta name="Description" content="{% block meta_description %}Backpack Nerd - Сайт за планински туризъм, разходки по света и у нас и фотография.{% endblock %}" />
+        <meta name="Keywords" content="{% block meta_keywords %}фотография,туризъм,планини,пътешествия,хайкинг,there-and-back-again,backpack-nerd{% endblock %}" />
+
+        <meta property="fb:app_id" content="1815326942053960" />
+        <meta property="og:locale" content="bg_BG" />
+        <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
+        <meta property="og:title" content="{% block og_title %}Backpack Nerd{% endblock %}" />
+        <meta property="og:description" content="{% block og_description %}Backpack Nerd - Сайт за планински туризъм, разходки по света и у нас и фотография.{% endblock %}" />
+        <meta property="og:image" content="{% block og_image %}{{ absolute_url(asset('build/images/og.jpg')) }}{% endblock %}" />
+        <meta property="og:url" content="{% block og_url %}{{ url('home') }}{% endblock %}" />
+
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <link rel="canonical" href="{{ app.request.getSchemeAndHttpHost ~ app.request.baseUrl ~ app.request.pathInfo }}" />
+
+        {{ include('partials/analytics.html.twig') }}
+
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
     <body>
+        {{ include('partials/header.html.twig') }}
+        {{ include('partials/navigation.html.twig') }}
+
         {% block body %}{% endblock %}
+
+        {{ include('partials/footer.html.twig') }}
     </body>
 </html>
