@@ -6,6 +6,10 @@ articles_list:
     path: /articles
     controller: App\Controller\ArticlesController::list
 
+articles_list_category:
+    path: /articles/category/{slug}
+    controller: App\Controller\ArticlesController::listCategory
+
 articles_show:
     path: /articles/{slug}
     controller: App\Controller\ArticlesController::show

@@ -7,6 +7,19 @@
         <h3 class="section-title">There and back again..</h3>
         <h6 class="section-subtitle">Всички статии</h6>
 
+        <div class="dropdown category">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Категория
+            </button>
+            {{ selectedCategory }}
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="{{ path('articles_list') }}">Всички</a></li>
+                {% for category in categories %}
+                    <li><a class="dropdown-item" href="{{ path('articles_list_category', {slug: category.slug}) }}">{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
         <div class="dashed">&nbsp;</div>
 
         <div class="row">

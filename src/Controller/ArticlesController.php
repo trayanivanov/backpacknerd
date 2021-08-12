@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Entity\ArticleCategory;
+use App\Repository\ArticleCategoryRepository;
 use App\Repository\ArticleRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,8 +14,12 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ArticlesController extends AbstractController
 {
-    public function list(ArticleRepository $articleRepository, PaginatorInterface $paginator, Request $request): Response
-    {
+    public function list(
+        ArticleRepository $articleRepository,
+        ArticleCategoryRepository $articleCategoryRepository,
+        PaginatorInterface $paginator,
+        Request $request
+    ): Response {
         $articles = $articleRepository->findBy(['active' => true], ['id' => 'desc']);
 
         $paginatorArticles = $paginator->paginate(
@@ -22,8 +28,36 @@ class ArticlesController extends AbstractController
             30
         );
 
+        $categories = $articleCategoryRepository->findBy(['active' => true], ['id' => 'asc']);
+
         return $this->render('articles.html.twig', [
             'articles' => $paginatorArticles,
+            'categories' => $categories,
+            'selectedCategory' => 'Всички',
+        ]);
+    }
+
+    public function listCategory(
+        ArticleCategory $category,
+        ArticleRepository $articleRepository,
+        ArticleCategoryRepository $articleCategoryRepository,
+        PaginatorInterface $paginator,
+        Request $request
+    ): Response {
+        $articles = $articleRepository->findBy(['articleCategory' => $category, 'active' => true], ['id' => 'desc']);
+
+        $paginatorArticles = $paginator->paginate(
+            $articles,
+            $request->query->getInt('page', 1),
+            30
+        );
+
+        $categories = $articleCategoryRepository->findBy(['active' => true], ['id' => 'asc']);
+
+        return $this->render('articles.html.twig', [
+            'articles' => $paginatorArticles,
+            'categories' => $categories,
+            'selectedCategory' => $category->getName(),
         ]);
     }
 
