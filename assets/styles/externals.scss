@@ -2,6 +2,19 @@ $body-bg: $bpn-light-grey;
 $body-color: $bpn-dark-grey;
 $font-family-base: 'Ossem-Rounded';
 
+$pagination-bg: $bpn-whiteish;
+$pagination-border-color: $bpn-blue;
+$pagination-focus-color: $bpn-blue;
+$pagination-focus-bg: $bpn-light-grey;
+$pagination-focus-box-shadow: none;
+$pagination-hover-color: $bpn-whiteish;
+$pagination-hover-bg: $bpn-dark-grey;
+$pagination-hover-border-color: $bpn-dark-grey;
+$pagination-active-bg: $bpn-blue;
+$pagination-disabled-color: $bpn-blue;
+$pagination-disabled-bg: $bpn-light-grey;
+$pagination-disabled-border-color: $bpn-blue;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 

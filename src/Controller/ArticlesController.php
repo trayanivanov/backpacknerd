@@ -4,18 +4,26 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Repository\ArticleRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ArticlesController extends AbstractController
 {
-    public function list(ArticleRepository $articleRepository): Response
+    public function list(ArticleRepository $articleRepository, PaginatorInterface $paginator, Request $request): Response
     {
         $articles = $articleRepository->findBy(['active' => true], ['id' => 'desc']);
 
+        $paginatorArticles = $paginator->paginate(
+            $articles,
+            $request->query->getInt('page', 1),
+            30
+        );
+
         return $this->render('articles.html.twig', [
-            'articles' => $articles,
+            'articles' => $paginatorArticles,
         ]);
     }
 
