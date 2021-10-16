@@ -1,3 +1,5 @@
+@import "variables";
+
 $body-bg: $bpn-light-grey;
 $body-color: $bpn-dark-grey;
 $font-family-base: 'Ossem-Rounded';
@@ -15,6 +17,12 @@ $pagination-disabled-color: $bpn-blue;
 $pagination-disabled-bg: $bpn-light-grey;
 $pagination-disabled-border-color: $bpn-blue;
 
+$theme-colors: (
+  success: $bpn-blue,
+  secondary: $bpn-dark-grey,
+  danger: $bpn-red,
+);
+
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
@@ -26,6 +34,43 @@ $pagination-disabled-border-color: $bpn-blue;
   .btn-outline-primary {
     @include button-outline-variant($bpn-blue, $bpn-whiteish, $bpn-blue, $bpn-blue, $bpn-whiteish);
   }
+}
+
+// Form build with symfony form and bootstrap
+#contact {
+  margin-top: 30px;
+
+  .form-group {
+    margin-top: 10px;
+  }
+
+  .btn-primary {
+    margin-top: 10px;
+    width: 100%;
+    @include button-variant($bpn-blue, $bpn-blue, $bpn-whiteish, $bpn-whiteish, $bpn-blue, $bpn-blue, $bpn-blue, $bpn-blue, $bpn-whiteish);
+  }
+
+  .btn-outline-primary {
+    @include button-outline-variant($bpn-blue, $bpn-whiteish, $bpn-blue, $bpn-blue, $bpn-whiteish);
+  }
+
+  .invalid-feedback {
+    .badge {
+      display: none;
+    }
+
+    .form-error-message {
+      color: $bpn-red;
+    }
+  }
+
+  .is-invalid {
+    border-color: $bpn-red;
+  }
+}
+
+.alert {
+  margin-top: 30px;
 }
 
 @import "~simplelightbox";
