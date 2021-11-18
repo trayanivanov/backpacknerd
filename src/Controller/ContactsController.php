@@ -23,15 +23,15 @@ class ContactsController extends AbstractController
             /** @var Contact $data */
             $data = $contactForm->getData();
 
-//            try {
-//                $emailToAdmin = $emailBuilder->adminContactForm($data);
-//                $mailer->send($emailToAdmin);
-//                $emailToVisitor = $emailBuilder->visitorContactForm($data);
-//                $mailer->send($emailToVisitor);
-//            } catch (TransportExceptionInterface $e) {
-//                $this->addFlash('error', 'Съобщението не е изпратено. Моля опитайте пак.');
-//                return $this->redirectToRoute('contacts');
-//            }
+            try {
+                $emailToAdmin = $emailBuilder->adminContactForm($data);
+                $mailer->send($emailToAdmin);
+                $emailToVisitor = $emailBuilder->visitorContactForm($data);
+                $mailer->send($emailToVisitor);
+            } catch (TransportExceptionInterface $e) {
+                $this->addFlash('error', 'Съобщението не е изпратено. Моля опитайте пак.');
+                return $this->redirectToRoute('contacts');
+            }
 
             $this->addFlash('success', 'Съобщението е изпратено успешно!');
             return $this->redirectToRoute('contacts');
