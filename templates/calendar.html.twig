@@ -4,7 +4,7 @@
     {{ include('partials/bpn_image.html.twig') }}
 
     <div class="container">
-        <h3 class="section-title">Календар 2024</h3>
+        <h3 class="section-title">Календар 2025</h3>
         <h6 class="section-subtitle">Купи си календар с кауза</h6>
 
         <div class="dashed">&nbsp;</div>
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-8">
                 <p>
-                    За шеста поредна година Backpack Nerd пуска собствен календар с кауза!<br><br>
+                    За седма поредна година Backpack Nerd пуска собствен календар с кауза!<br><br>
 
                     Симпатизирам на фондация наречена "Нашите недоносени деца".<br>
                     Харесвам тяхната дейност свързана с подкрепа към недоносените бебета и техните семейства.<br>
@@ -20,7 +20,7 @@
 
                     Backpack Nerd иска да помогне на фондация "Нашите недоносени деца" като дари <span class="red">100% от печалбата</span> на продадените календари.<br>
                     Цената за един брой календар е <span class="red">10 лева</span>.<br>
-                    Тиражът тази година е 200 бройки.<br>
+                    Тиражът тази година е 300 бройки.<br>
                     Размерите му са 15 на 15 сантиметра - настолен - тип "пирамидка" със спирала. Състои се от корица и 12 листа с мои фотографии от прекрасни дестинации.<br><br>
 
                     Заявените бройки ще бъдат изпращани чрез куриерските услуги на Еконт и Спиди за сметка на получателя.<br><br>
@@ -28,33 +28,54 @@
                     Можеш да заявиш твоята бройка на <a href="mailto:trayan@backpacknerd.com">trayan@backpacknerd.com</a>, <a href="{{ path('contacts') }}" target="_blank">контактната форма</a> или чрез съобщение в някой от социалните канали на Backpack Nerd.<br><br>
 
                     Повече информация за фондацията можеш да откриеш на техният сайт - <a href="https://premature-bg.com" target="_blank">premature-bg.com</a> или <a href="https://www.facebook.com/prematurebg" target="_blank">facebook профил</a>.<br><br>
-
-                    <span class="red">
-                        С гордост обявявам кампанията за успешно приключила!<br>
-                        Тираж от 200 броя настолни календари се продаде за по-малко от месец.<br>
-                        Събраните средства в помощ на фондация "Нашите недоносени деца" са 1500 лева!<br><br>
-                    </span>
                 </p>
 
                 <div class="article-gallery mb-2">
                     <a href="{{ asset('build/images/calendar/preview.jpg') }}">
-                        <img src="{{ asset('build/images/calendar/preview_tmb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2024" alt="Backpack Nerd Calendar 2024" />
+                        <img src="{{ asset('build/images/calendar/preview_tmb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2025" alt="Backpack Nerd Calendar 2025" />
                     </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="article-gallery">
-                    <a href="{{ asset('build/images/calendar/calendar_24.jpg') }}">
-                        <img src="{{ asset('build/images/calendar/calendar_24_thumb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2024" alt="Backpack Nerd Calendar 2024" />
+                    <a href="{{ asset('build/images/calendar/calendar_25.jpg') }}">
+                        <img src="{{ asset('build/images/calendar/calendar_25_thumb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2025" alt="Backpack Nerd Calendar 2025" />
                     </a>
                 </div>
                 <a href="https://premature-bg.com" target="_blank">
-                    <img src="{{ asset('build/images/misc/nnd.png') }}" class="img-fluid rounded mt-4" title="Our premature children - Backpack Nerd Calendar 2024" alt="Our premature children - Backpack Nerd Calendar 2024" />
+                    <img src="{{ asset('build/images/misc/nnd.png') }}" class="img-fluid rounded mt-4" title="Our premature children - Backpack Nerd Calendar 2025" alt="Our premature children - Backpack Nerd Calendar 2025" />
                 </a>
             </div>
         </div>
 
         {{ include('partials/follow_me.html.twig') }}
+
+        <br><br><br>
+
+        <h3 class="section-title">Календар 2024</h3>
+        <h6 class="section-subtitle">Приключила кампания</h6>
+
+        <div class="dashed">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    С гордост обявявам кампанията за успешно приключила!<br>
+                    Тираж от 200 броя настолни календари се продаде за по-малко от месец.<br>
+                    Събраните средства в помощ на фондация "Нашите недоносени деца" са <span class="red">1500 лева</span>!<br>
+                </p>
+                <a href="https://premature-bg.com" target="_blank">
+                    <img src="{{ asset('build/images/misc/nnd.png') }}" class="img-fluid rounded mt-4" style="max-height: 130px;" title="Our premature children - Backpack Nerd Calendar 2024" alt="Our premature children - Backpack Nerd Calendar 2024" />
+                </a>
+            </div>
+            <div class="col-md-4 mt-2">
+                <div class="article-gallery">
+                    <a href="{{ asset('build/images/calendar/calendar_24.jpg') }}">
+                        <img src="{{ asset('build/images/calendar/calendar_24_thumb.jpg') }}" class="img-fluid rounded" title="Backpack Nerd Calendar 2024" alt="Backpack Nerd Calendar 2024" />
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <br><br><br>
 
@@ -203,9 +224,9 @@
     </div>
 {% endblock %}
 
-{% block meta_title %}{{ 'Календар с кауза 2024 - ' ~  parent() }}{% endblock %}
+{% block meta_title %}{{ 'Календар с кауза 2025 - ' ~  parent() }}{% endblock %}
 
-{% block og_title %}{{ 'Календар с кауза 2024 - ' ~  parent() }}{% endblock %}
+{% block og_title %}{{ 'Календар с кауза 2025 - ' ~  parent() }}{% endblock %}
 {% block og_image %}{{ absolute_url(asset('build/images/calendar/fb_og.jpg')) }}{% endblock %}
 {% block og_url %}{{ url('calendar') }}{% endblock %}
 
